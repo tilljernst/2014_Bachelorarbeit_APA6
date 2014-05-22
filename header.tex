@@ -1,6 +1,6 @@
 % taken from the APA6 original
 % ---------------------------------------------------
-\documentclass[appendixprefix, a4paper,man,natbib]{apa6}
+\documentclass[appendixprefix, a4paper,man,natbib,noextraspace]{apa6}
 
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc} % changed from utf8x to utf8 -> Umlaute
@@ -13,12 +13,15 @@
 % taken from the old BA header-file
 % ---------------------------------------------------
 \usepackage[T1]{fontenc}
+\usepackage{pdflscape}
+\usepackage{pdfpages}
 \usepackage{tabularx}
 \usepackage{longtable}
 \usepackage{titleref}
 \usepackage{nameref}
 \usepackage{url}
 \usepackage{tocloft} % fancy TOC
+\usepackage[onehalfspacing]{setspace}
 
 % Bereitstellen Anhang
 \usepackage[toc,page]{appendix}
@@ -27,7 +30,20 @@
 \usepackage[acronym]{glossaries}
 \makeglossaries
 
-\usepackage{hyperref}
+% Bereitstellung Hyperlinkfunktionen (PDF) (muss als letztes Paket geladen werden)
+\usepackage[
+	colorlinks=true,
+	breaklinks=true,
+	linkcolor=black,
+	citecolor=black,
+	urlcolor=black,
+	anchorcolor=black,
+	pdfpagelabels,
+	pdftitle={Die Auswirkung von Medien-Multitasking auf das subjektive Wohlbefinden von Studierenden},
+	pdfsubject={Beeinflusst Multitasking das eigen Glück?},
+	pdfkeywords={Multitasking, subjektives Wohlbefinden, Glück, kognitive Kontrolle},
+	pdfauthor={Till J. Ernst (ernsttil)}
+]{hyperref}
 
 % style information
 % ---------------------------------------------------
