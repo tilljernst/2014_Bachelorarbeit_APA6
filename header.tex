@@ -1,6 +1,6 @@
 % taken from the APA6 original
 % ---------------------------------------------------
-\documentclass[a4paper,man,natbib]{apa6}
+\documentclass[appendixprefix, a4paper,man,natbib]{apa6}
 
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc} % changed from utf8x to utf8 -> Umlaute
@@ -9,11 +9,16 @@
 \usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes}
 
+% ---------------------------------------------------
 % taken from the old BA header-file
 % ---------------------------------------------------
 \usepackage[T1]{fontenc}
-
+\usepackage{tabularx}
 \usepackage{longtable}
+\usepackage{titleref}
+\usepackage{nameref}
+\usepackage{url}
+\usepackage{tocloft} % fancy TOC
 
 % Bereitstellen Anhang
 \usepackage[toc,page]{appendix}
@@ -21,3 +26,12 @@
 % Bereitstellung Glossar
 \usepackage[acronym]{glossaries}
 \makeglossaries
+
+\usepackage{hyperref}
+
+% style information
+% ---------------------------------------------------
+% Für Tabellen: Textausrichtung bei fester Spaltenbreite
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % linksbündig mit Breitenangabe
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} % zentriert mit Breitenangabe
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}} % rechtsbündig mit Breitenangabe
