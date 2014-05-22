@@ -5,13 +5,25 @@
 \author{Till J. Ernst}
 \affiliation{ZHAW angewandte Psychologie} % die Mitgliedschaft
 
-\abstract{Your abstract here.}
+%\abstract{Your abstract here.} % no apa6 abstract here, use zhaw specific
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %% Begin of the document
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-\maketitle
+%\maketitle % no apa6 title, use zhaw own pdf pages
+
+% -> Keine Seitenzahlen bis TOC
+\pagenumbering{gobble}
+
+% Danksagung
+\include{content/0_danksagung}
+
+% Vorwort
+\include{content/0_vorwort}
+
+% Abstract
+\include{content/0_abstract} 
 
 % Inhaltsverzeichnis
 \setcounter{page}{1}
@@ -28,8 +40,31 @@
 \listoftables
 \newpage
 
+% Abkürzungsverzeichnis (Glossar)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%% Hauptteil
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Kapitel
+% -----------------------------------
 \setcounter{page}{1}
 \pagenumbering{arabic}
+% Einleitung
+\include{content/1_einleitung}
+
+% Methode
+\include{content/2_methode}
+
+% Ergebnisse
+\include{content/3_ergebnisse}
+
+%Diskussion
+\include{content/4_diskussion}
+
+% -----------------------------------
+
+% Literaturverzeichnis
+\bibliography{Bibliography}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %% ANHANG 
@@ -42,6 +77,7 @@
 \addappheadtotoc % Anhang in Hauptinhaltsverzeichnis aufnehmen
 \addtocontents{toc}{\protect\setcounter{tocdepth}{-1}} % die kommenden Anhänge erscheinen nicht im Inhaltsverzeichnis 
 
+% die einzelnen Anhänge
 \include{content/anhang_medieUseQuestionnaire}
 
 
@@ -115,7 +151,7 @@ You can make lists with automatic numbering \dots
 
 We hope you find write\LaTeX\ useful, and please let us know if you have any feedback using the help menu above.
 
-\bibliography{Bibliography}
+%\bibliography{Bibliography}
 
 \end{document}
 
