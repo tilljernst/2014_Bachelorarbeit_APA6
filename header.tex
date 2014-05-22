@@ -4,8 +4,10 @@
                a4paper,
                man,
                natbib,
-               noextraspace,
-               floatsintext]{apa6}
+               12pt,
+               floatsintext, %Bilder am gewünschten Ort einfügen
+               %helv %use Helvetica font
+]{apa6}
 
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc} % changed from utf8x to utf8 -> Umlaute
@@ -17,7 +19,6 @@
 % ---------------------------------------------------
 % taken from the old BA header-file
 % ---------------------------------------------------
-\usepackage[T1]{fontenc}
 \usepackage{pdflscape}
 \usepackage{pdfpages}
 \usepackage{tabularx}
@@ -29,7 +30,6 @@
 \usepackage[onehalfspacing]{setspace}
 \usepackage{graphicx}
 \usepackage{float} % bilder genau am platz einfügen
-\usepackage[section]{placeins}
 
 % Bereitstellen Anhang
 \usepackage[toc,page]{appendix}
