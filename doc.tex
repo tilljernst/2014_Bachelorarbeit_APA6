@@ -31,6 +31,24 @@
 \setcounter{page}{1}
 \pagenumbering{arabic}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%% ANHANG 
+%% Anhang erscheint nicht im Inhaltsverzeichnis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagenumbering{Roman}
+\appendix 
+\renewcommand{\appendixname}{Anhang} 
+\renewcommand{\appendixtocname}{\appendixname} 
+\addappheadtotoc % Anhang in Hauptinhaltsverzeichnis aufnehmen
+\addtocontents{toc}{\protect\setcounter{tocdepth}{-1}} % die kommenden Anhänge erscheinen nicht im Inhaltsverzeichnis 
+
+\include{content/anhang_medieUseQuestionnaire}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%% Beispiel von APA6 Vorlage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Introduction}
 
 Your introduction goes here! Some examples \cite{Shih2013} of commonly \cite{Shih2013} used commands and features are listed below, to help you get started.
